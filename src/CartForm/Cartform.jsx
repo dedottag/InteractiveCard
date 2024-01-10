@@ -1,5 +1,4 @@
 import "./cart-form.css";
-import { useState } from "react";
 
 function insertSpaces(str) {
   return str.replace(/\d{4}(?=.)/g, "$& ");

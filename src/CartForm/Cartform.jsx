@@ -1,32 +1,75 @@
 import "./cart-form.css";
-import { useForm } from "react-hook-form";
+import { useState } from "react";
 
-const CartForm = () => {
-  const form = useForm();
-  const { handleSubmit, register, formState } = form;
-  const { errors } = formState;
+function insertSpaces(str) {
+  return str.replace(/\d{4}(?=.)/g, "$& ");
+}
 
-  function onSubmit(data) {
-    console.log(data);
+const CartForm = ({
+  number,
+  setNumber,
+  setName,
+  setDateMM,
+  setDateYY,
+  setCvc,
+}) => {
+  function handleChange(event) {
+    const newValue = insertSpaces(event.target.value.replace(/\s/g, ""));
+    setNumber(newValue);
   }
 
   return (
     <div className="cart-from-container">
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className="form">
+        <span className="description">Cardholder Name</span>
         <input
-          {...register("cartNumber", {
-            pattern: {
-              value: /[0-9\s]{13,19}/,
-              message: "Valid email required",
-            },
-          })}
-          maxLength={16}
-          type="tel"
-          inputMode="numeric"
-          autoComplete="cc-number"
-          placeholder="xxxx xxxx xxxx xxxx"
+          className="cardholder-info"
+          type="text"
+          placeholder="e.g. Jane Appleseed"
+          onChange={(e) => setName(e.target.value)}
         />
-        <span className="message">{errors.cartNumber?.message}</span>
+        <span className="description">Card Number</span>
+        <input
+          className="cardholder-info"
+          type="text"
+          placeholder="e.g. 1234 5678 9123 0000"
+          value={number}
+          onChange={handleChange}
+          maxLength={19}
+          minLength={19}
+        />
+        <div className="card-date-container">
+          <span className="date-description">Exp. Date (MM/YY)</span>
+          <input
+            className="card-date-mm-yy"
+            type="text"
+            placeholder="MM"
+            maxLength={2}
+            onChange={(e) => setDateMM(e.target.value)}
+          />
+          <input
+            className="card-date-mm-yy"
+            type="text"
+            placeholder="YY"
+            maxLength={2}
+            onChange={(e) => setDateYY(e.target.value)}
+          />
+        </div>
+        <div className="cvc-container">
+          <span className="description" style={{ fontSize: "14px" }}>
+            CVC
+          </span>
+          <input
+            className="card-cvc"
+            type="text"
+            placeholder="e.g. 123"
+            maxLength={3}
+            onChange={(e) => setCvc(e.target.value)}
+          />
+        </div>
+        <button className="confirm-button" type="button">
+          Confirm
+        </button>
       </form>
     </div>
   );

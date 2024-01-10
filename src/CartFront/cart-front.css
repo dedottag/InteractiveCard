@@ -15,3 +15,16 @@
   color: white;
   /* background-color: brown; */
 }
+
+.cart-number {
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+
+.card-info-footer {
+  width: 390px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  /* background-color: aquamarine; */
+}

@@ -1,3 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Grotesk:wght@500&display=swap");
+
+:root {
+  /* color */
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+
+  /* (active input border) */
+  --linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  /* (input errors) */
+  --red: hsl(0, 100%, 66%);
+
+  /* thypography */
+  --family: "Space Grotesk";
+  --fn-base: 18px;
+  --weight-bold: 500;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,6 +31,7 @@ body {
   margin: 0;
   display: flex;
   align-items: center;
+  font-family: var(--family);
   /* justify-content: space-between; */
 }
 
@@ -22,5 +43,5 @@ body {
   height: 530px;
   display: flex;
   flex-wrap: wrap;
-  background-color: brown;
+  /* background-color: brown; */
 }

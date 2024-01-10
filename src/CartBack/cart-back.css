@@ -1,0 +1,18 @@
+.cart-back-container {
+  height: 245px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* background-color: brown; */
+}
+.cart-img {
+  box-shadow: 15px 15px 15px rgba(37, 37, 37, 0.118);
+  border-radius: 10px;
+}
+
+.cart-cvc {
+  position: absolute;
+  left: 365px;
+  bottom: 115px;
+  color: white;
+}

@@ -1,0 +1,7 @@
+.cart-from-container {
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  right: 150px;
+  background-color: rgb(44, 165, 42);
+}

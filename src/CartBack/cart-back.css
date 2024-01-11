@@ -16,3 +16,21 @@
   bottom: 115px;
   color: white;
 }
+
+@media (max-width: 500px) {
+  .cart-back-container {
+    height: 120px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* background-color: brown; */
+  }
+
+  .cart-cvc {
+    font-size: 12px;
+    position: absolute;
+    left: 230px;
+    top: 70px;
+    color: rgb(255, 255, 255);
+  }
+}

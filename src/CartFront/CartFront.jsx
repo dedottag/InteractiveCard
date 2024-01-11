@@ -11,7 +11,7 @@ const CartFront = ({ number, name, dateMM, dateYY }) => {
           {number ? number : "0000 0000 0000 0000"}
         </span>
         <div className="card-info-footer">
-          <span className="name">{name ? name : "Jane Appleseed"}</span>
+          <span className="name">{name ? name : "Ibrahim Yusupov"}</span>
           <span className="cart-date">
             {dateMM}/{dateYY}
           </span>

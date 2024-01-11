@@ -76,3 +76,17 @@ input:focus {
   margin-top: 20px;
   cursor: pointer;
 }
+
+@media (max-width: 500px) {
+  .cart-from-container {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 370px;
+    right: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: brown; */
+  }
+}

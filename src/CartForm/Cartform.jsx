@@ -17,6 +17,12 @@ const CartForm = ({
     setNumber(newValue);
   }
 
+  function handleNumber(event) {
+    if (!/[0-9]/.test(event.key)) {
+      event.preventDefault();
+    }
+  }
+
   return (
     <div className="cart-from-container">
       <form className="form">
@@ -24,8 +30,14 @@ const CartForm = ({
         <input
           className="cardholder-info"
           type="text"
-          placeholder="e.g. Jane Appleseed"
+          placeholder="e.g. Ibrahim Yusupov"
           onChange={(e) => setName(e.target.value)}
+          onKeyPress={(event) => {
+            if (!/[A-Z, a-z]/.test(event.key)) {
+              event.preventDefault();
+            }
+          }}
+          maxLength={25}
         />
         <span className="description">Card Number</span>
         <input
@@ -36,6 +48,9 @@ const CartForm = ({
           onChange={handleChange}
           maxLength={19}
           minLength={19}
+          onKeyPress={(event) => {
+            handleNumber(event);
+          }}
         />
         <div className="card-date-container">
           <span className="date-description">Exp. Date (MM/YY)</span>
@@ -45,6 +60,9 @@ const CartForm = ({
             placeholder="MM"
             maxLength={2}
             onChange={(e) => setDateMM(e.target.value)}
+            onKeyPress={(event) => {
+              handleNumber(event);
+            }}
           />
           <input
             className="card-date-mm-yy"
@@ -52,6 +70,9 @@ const CartForm = ({
             placeholder="YY"
             maxLength={2}
             onChange={(e) => setDateYY(e.target.value)}
+            onKeyPress={(event) => {
+              handleNumber(event);
+            }}
           />
         </div>
         <div className="cvc-container">
@@ -64,6 +85,9 @@ const CartForm = ({
             placeholder="e.g. 123"
             maxLength={3}
             onChange={(e) => setCvc(e.target.value)}
+            onKeyPress={(event) => {
+              handleNumber(event);
+            }}
           />
         </div>
         <button className="confirm-button" type="button">

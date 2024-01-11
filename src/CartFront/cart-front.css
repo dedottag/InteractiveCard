@@ -28,3 +28,45 @@
   margin-top: 20px;
   /* background-color: aquamarine; */
 }
+
+@media (max-width: 500px) {
+  .cart-front-container {
+    position: absolute;
+    top: 90px;
+    width: 290px;
+    height: 160px;
+    /* background-color: aqua; */
+    z-index: 1;
+  }
+
+  .cart-img {
+    width: 290px;
+  }
+
+  .cart-logo {
+    width: 50px;
+    margin: 15px;
+  }
+
+  .cart-number {
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+
+  .cart-info-container {
+    position: absolute;
+    bottom: 0px;
+    margin: 0 15px 15px 15px;
+    color: white;
+    /* background-color: rgb(140, 165, 42); */
+  }
+
+  .card-info-footer {
+    width: 260px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    /* background-color: aquamarine; */
+  }
+}

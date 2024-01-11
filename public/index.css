@@ -45,3 +45,31 @@ body {
   flex-wrap: wrap;
   /* background-color: brown; */
 }
+
+.mobile-background-image {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .desktop-background-image {
+    display: none;
+  }
+
+  .mobile-background-image {
+    display: unset;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .carts-container {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 350px;
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: brown; */
+  }
+}

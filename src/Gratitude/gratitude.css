@@ -1,0 +1,27 @@
+.gratitude-container {
+  /* background-color: brown; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+}
+
+.gratitude-tittle {
+  color: var(--very-dark-violet);
+}
+
+.cart-details {
+  color: var(--dark-grayish-violet);
+}
+
+.continue-button {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--very-dark-violet);
+  border: none;
+  margin-top: 40px;
+  cursor: pointer;
+}

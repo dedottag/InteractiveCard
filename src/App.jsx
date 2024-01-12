@@ -11,6 +11,7 @@ function App() {
   const [dateMM, setDateMM] = useState("00");
   const [dateYY, setDateYY] = useState("00");
   const [cvc, setCvc] = useState("000");
+  const [gratitude, setGratitude] = useState(false);
 
   return (
     <div className="App">
@@ -37,6 +38,8 @@ function App() {
         setCvc={setCvc}
         dateMM={dateMM}
         setDateYY={setDateYY}
+        gratitude={gratitude}
+        setGratitude={setGratitude}
       />
     </div>
   );
